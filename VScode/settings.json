@@ -1,21 +1,29 @@
 {
     "workbench.colorTheme": "GitHub Dark",
-    "workbench.startupEditor": "none",
     "workbench.iconTheme": "vscode-icons",
-    "vsicons.dontShowNewVersionMessage": true,
+    "workbench.startupEditor": "none",
+
     "explorer.confirmDragAndDrop": false,
-    "git.confirmSync": false,
+
     "editor.inlineSuggest.enabled": true,
     "editor.minimap.side": "left",
     "editor.glyphMargin": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.codeActionsOnSave": {},
+
     "files.autoSave": "onFocusChange",
     "files.trimTrailingWhitespace": true,
+
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "editor.unicodeHighlight.invisibleCharacters": false,
-    "extensions.ignoreRecommendations": true,
-    "git.ignoreRebaseWarning": true,
+
     "git.openRepositoryInParentFolders": "never",
-    "editor.codeActionsOnSave": {}
+    "git.confirmSync": false,
+    "git.ignoreRebaseWarning": true,
+
+    "extensions.ignoreRecommendations": true,
+    "tabnine.experimentalAutoImports": true,
+
+    "vsicons.dontShowNewVersionMessage": true
 }
