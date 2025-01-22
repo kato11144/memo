@@ -23,7 +23,6 @@
     "git.ignoreRebaseWarning": true,
 
     "extensions.ignoreRecommendations": true,
-    "tabnine.experimentalAutoImports": true,
 
     "vsicons.dontShowNewVersionMessage": true
 }
