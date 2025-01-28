@@ -17,3 +17,6 @@
 
 拡張機能の表示<br>
 `command(⌘) + shift(⇧) + X`
+
+ソース管理の表示<br>
+`control(^) + shift(⇧) + G`
