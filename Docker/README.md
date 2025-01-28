@@ -6,3 +6,8 @@ docker compose exec hoge /bin/bash
 
 docker compose down
 ```
+
+キャッシュの削除
+```sh
+docker system prune -af --volumes
+```
