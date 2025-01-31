@@ -1,4 +1,5 @@
-`settings.json`の設定 (**⌘ ,**)
+`settings.json`の設定<br>
+`command(⌘) + ,`
 
 サイドバー表示の切り替え<br>
 `command(⌘) + B`
@@ -20,3 +21,6 @@
 
 ソース管理の表示<br>
 `control(^) + shift(⇧) + G`
+
+Markdownプレビューの表示
+`command(⌘) + K V`
