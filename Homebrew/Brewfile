@@ -1,5 +1,6 @@
 tap "homebrew/bundle"
 brew "git"
+brew "wget"
 cask "arc"
 cask "caffeine"
 cask "clipy"
