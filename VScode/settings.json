@@ -1,6 +1,7 @@
 {
     "workbench.colorTheme": "GitHub Dark",
     "workbench.iconTheme": "vscode-icons",
+    "workbench.sideBar.location": "right",
     "workbench.startupEditor": "none",
 
     "explorer.confirmDragAndDrop": false,
