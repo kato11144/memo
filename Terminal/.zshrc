@@ -1,4 +1,12 @@
 #====================#
+# ⚡ Powerlevel10k
+#====================#
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+#====================#
 # 🛠️ 基本設定
 #====================#
 export LANG=ja_JP.UTF-8
@@ -38,7 +46,7 @@ if [[ ! -f "${ZDOTDIR:-$HOME}/.zinit/bin/zinit.zsh" ]]; then
   git clone https://github.com/zdharma-continuum/zinit "${ZDOTDIR:-$HOME}/.zinit/bin"
 fi
 source "${ZDOTDIR:-$HOME}/.zinit/bin/zinit.zsh"
-zinit self-update
+zinit self-update &> /dev/null
 
 #====================#
 # 🔌 プラグイン導入
@@ -46,6 +54,7 @@ zinit self-update
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
+zinit light romkatv/powerlevel10k
 
 #====================#
 # 🔍 補完設定
@@ -53,18 +62,13 @@ zinit light zsh-users/zsh-completions
 autoload -Uz compinit && compinit -u
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin
-zstyle ':completion::complete:*' use-cache on
-zstyle ':completion::complete:*' cache-path ~/.zsh/cache
 
 #====================#
 # 🎨 プロンプト設定
 #====================#
-PROMPT="%{${fg[blue]}%}%n:%{${reset_color}%} %c/ %# "
-
-function add_line {
-  [[ -z "${PS1_NEWLINE_LOGIN}" ]] && PS1_NEWLINE_LOGIN=true || printf '\n'
-}
-add-zsh-hook precmd add_line
+if [[ -f ~/.p10k.zsh ]]; then
+  source ~/.p10k.zsh
+fi
 
 #====================#
 # 🔧 vcs_info
@@ -80,7 +84,7 @@ function _update_vcs_info_msg() {
 add-zsh-hook precmd _update_vcs_info_msg
 
 #====================#
-# ⚡ エイリアス
+# 📦 エイリアス
 #====================#
 alias la='ls -a'
 alias ll='ls -l'
