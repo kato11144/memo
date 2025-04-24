@@ -27,3 +27,16 @@ pgrep -af run.sh
 
 kill {PID}
 ```
+
+バックアップ
+```sh
+sudo mkdir /mnt/backup_ssd
+
+sudo mount /dev/sdb /mnt/backup_ssd
+
+sudo rsync -aAXHv --delete --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found"} / /mnt/backup_ssd/ | tee rsync_log.txt
+
+sudo ls /mnt/backup_ssd/
+
+sudo umount /mnt/backup_ssd
+```
