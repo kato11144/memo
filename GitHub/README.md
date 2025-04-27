@@ -6,7 +6,9 @@ git config --global user.email "メールアドレス"
 
 git config --global init.defaultBranch main
 
-ssh-keygen
+git config -l
+
+ssh-keygen -t ed25519
 ```
 
 `~/.ssh/config`の設定
