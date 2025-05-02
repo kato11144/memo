@@ -20,6 +20,17 @@ sudo passwd newusername
 sudo deluser newusername
 ```
 
+`ssh`関連
+```sh
+sudo apt install openssh-server
+
+sudo vim /etc/ssh/sshd_config
+
+sudo service ssh start
+
+sudo service ssh status
+```
+
 `.DS_Store`の削除
 ```sh
 sudo find / -name ".DS_Store" -delete
