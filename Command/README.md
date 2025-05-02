@@ -1,3 +1,14 @@
+`wsl`関連
+```sh
+wsl --install
+
+wsl --update
+
+wsl --version
+
+wsl --shutdown
+```
+
 `Ubuntu`関連
 ```sh
 sudo adduser newusername
