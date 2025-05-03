@@ -75,3 +75,10 @@ git stash drop stash@{0}
 
 git stash clear
 ```
+
+コミット関連
+```sh
+git rebase -i --root
+
+git push --force
+```
