@@ -63,6 +63,13 @@ git fetch -p
 git fetch --all
 ```
 
+最新状態の同期
+```sh
+git fetch origin
+
+git reset --hard origin/main
+```
+
 一時保存
 ```sh
 git stash -u
